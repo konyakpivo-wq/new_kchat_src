@@ -1,0 +1,28 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'io.kchat.newkchat'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'io.kchat.newkchat'
+        minSdk 23
+        targetSdk 35
+        versionCode 1
+        versionName '0.1.0'
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "TELEGRAM_API_ID", """"
+            buildConfigField "String", "TELEGRAM_API_HASH", """"
+        }
+        release {
+            minifyEnabled false
+            buildConfigField "String", "TELEGRAM_API_ID", """"
+            buildConfigField "String", "TELEGRAM_API_HASH", """"
+        }
+    }
+}
